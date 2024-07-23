@@ -14,6 +14,10 @@
     </style>
     <script>
       function start(){
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+
+        
         var arg = urlParams.get('team');
 
         var txt = document.getElementById('txt');
