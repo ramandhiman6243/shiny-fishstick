@@ -12,10 +12,25 @@
         text-align: center;
       }
     </style>
+    <script>
+      function start(){
+        var arg = urlParams.get('team');
+
+        var txt = document.getElementById('txt');
+        
+        if(arg == '0')
+        {
+          txt.textContent = "Invalid";
+        }else{
+          txt.textContent = "Team " + arg;
+        }
+        // src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+      }
+    </script>
   </head>
-  <body>
-    <img src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+  <body onload='start()'>
+    <img width='100%' id='image'>
     <br>
-    <div id='txt'>Text Here</div>
+    <div id='txt'></div>
   </body>
 </html>
