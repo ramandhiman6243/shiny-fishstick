@@ -16,19 +16,21 @@
       function start(){
         const queryString = window.location.search;
         const urlParams = new URLSearchParams(queryString);
-
-        
-        var arg = urlParams.get('team');
+        var arg = urlParams.get('id');
 
         var txt = document.getElementById('txt');
+        var img = document.getElementById('image');
         
         if(arg == '0')
         {
           txt.textContent = "Invalid";
-        }else{
-          txt.textContent = "Team " + arg;
+          img.src = "https://e3.365dm.com/24/03/1600x900/skynews-francois-langur-monkey_6488923.jpg";
         }
-        // src="https://letsenhance.io/static/8f5e523ee6b2479e26ecc91b9c25261e/1015f/MainAfter.jpg">
+        else
+        {
+          txt.textContent = "Team " + arg;
+          img.src = "https://sachin-rekhi.s3-us-west-1.amazonaws.com/blog/minimum-viable-team.jpg";
+        }
       }
     </script>
   </head>
